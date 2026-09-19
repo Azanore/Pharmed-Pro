@@ -521,20 +521,22 @@ export function CounterSimulator({
               </div>
             </div>
 
-            {/* Visual Step Progress Bar */}
-            <div className="flex items-center gap-1.5">
-              {currentScenario.steps.map((_, idx) => (
-                <div 
-                  key={idx}
-                  className={`h-1.5 rounded-full flex-1 transition-all duration-300 ${
-                    idx < currentStepIndex 
-                      ? "bg-teal-600" 
-                      : idx === currentStepIndex 
-                        ? "bg-teal-400 ring-2 ring-teal-400/30" 
-                        : "bg-slate-200"
-                  }`}
-                />
-              ))}
+            {/* Visual Step Progress Bar - Sticky */}
+            <div className="sticky top-0 z-20 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 bg-slate-50/95 backdrop-blur-sm border-b border-slate-200/80">
+              <div className="flex items-center gap-1.5">
+                {currentScenario.steps.map((_, idx) => (
+                  <div 
+                    key={idx}
+                    className={`h-1.5 rounded-full flex-1 transition-all duration-300 ${
+                      idx < currentStepIndex 
+                        ? "bg-teal-600" 
+                        : idx === currentStepIndex 
+                          ? "bg-teal-400 ring-2 ring-teal-400/30" 
+                          : "bg-slate-200"
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
 
             {/* Patient Card & Context */}
