@@ -50,6 +50,29 @@ npm start
 ```
 L'application est immédiatement accessible sur `http://localhost:3000`.
 
+### Déploiement sur Vercel
+
+Le projet est optimisé pour un déploiement sur Vercel :
+
+1. **Via GitHub** :
+   - Connectez votre compte Vercel à ce dépôt GitHub
+   - Vercel détectera automatiquement la configuration
+   - Le déploiement se fait automatiquement à chaque push
+
+2. **Via CLI Vercel** :
+   ```bash
+   npm install -g vercel
+   vercel
+   ```
+
+3. **Configuration** :
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Framework Preset: Vite
+   - Node.js Version: 18.x ou supérieur
+
+Le projet inclut un fichier `vercel.json` pour la configuration automatique.
+
 ---
 
 ## 4. Parcours Modifié : Avant / Après (Before vs After)
