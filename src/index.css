@@ -1,33 +1,37 @@
 @import "tailwindcss";
 
-/* Critical Accessibility: Visible Focus States */
-*:focus-visible {
-  outline: 2px solid #0d9488;
-  outline-offset: 2px;
-  border-radius: 0.5rem;
+@layer utilities {
+
+  /* Touch Target Minimum: Ensure all interactive elements meet 44×44px */
+  .touch-target {
+    min-width: 44px;
+    min-height: 44px;
+  }
 }
 
-button:focus-visible, 
-a:focus-visible, 
-[role="button"]:focus-visible {
-  outline: 2px solid #0d9488;
-  outline-offset: 2px;
-  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.2);
-}
+@layer base {
 
-/* Touch Target Minimum: Ensure all interactive elements meet 44×44px */
-.touch-target {
-  min-width: 44px;
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-center: center;
+  /* Critical Accessibility: Visible Focus States */
+  *:focus-visible {
+    outline: 2px solid #0d9488;
+    outline-offset: 2px;
+    border-radius: 0.5rem;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid #0d9488;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.2);
+  }
 }
 
 @keyframes slideLeft {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -37,6 +41,7 @@ a:focus-visible,
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -47,6 +52,7 @@ a:focus-visible,
     transform: translateY(20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -64,4 +70,3 @@ a:focus-visible,
 .animate-slide-up {
   animation: slideUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
-
