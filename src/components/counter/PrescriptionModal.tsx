@@ -42,12 +42,12 @@ export function PrescriptionModal({ scenario, onClose }: PrescriptionModalProps)
   return (
     <div 
       id="prescription-modal-backdrop"
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs overflow-y-auto overscroll-contain animate-fade-in"
+      className="fixed top-16 left-0 right-0 bottom-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs overflow-y-auto overscroll-contain animate-fade-in"
       onClick={onClose}
     >
       <div 
         id="prescription-pad-card"
-        className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-auto flex flex-col max-h-[88vh] overscroll-contain"
+        className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-auto flex flex-col max-h-[calc(100vh-5rem)] overscroll-contain"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
