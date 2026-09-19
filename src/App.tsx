@@ -220,14 +220,20 @@ export default function App() {
         )}
       </main>
 
-      {/* Floating Toast Notification */}
+      {/* Floating Toast Notification - Accessible */}
       {toastMessage && (
-        <div className="fixed bottom-5 right-5 z-50 flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-slate-900 text-white text-xs font-semibold shadow-2xl border border-slate-700 animate-slide-up">
-          <Sparkles className="w-4 h-4 text-teal-400 shrink-0" />
+        <div 
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          className="fixed bottom-5 right-5 z-50 flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-slate-900 text-white text-xs font-semibold shadow-2xl border border-slate-700 animate-slide-up touch-target"
+        >
+          <Sparkles className="w-4 h-4 text-teal-400 shrink-0" aria-hidden="true" />
           <span>{toastMessage}</span>
           <button 
             onClick={() => setToastMessage(null)}
-            className="ml-2 text-slate-400 hover:text-white cursor-pointer"
+            className="ml-2 p-1 text-slate-400 hover:text-white cursor-pointer touch-target"
+            aria-label="Fermer la notification"
           >
             <X className="w-3.5 h-3.5" />
           </button>

@@ -42,13 +42,11 @@ export function PrescriptionModal({ scenario, onClose }: PrescriptionModalProps)
   return (
     <div 
       id="prescription-modal-backdrop"
-      className="fixed top-16 left-0 right-0 bottom-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs overflow-y-auto overscroll-contain animate-fade-in"
-      onClick={onClose}
+      className="fixed top-16 left-0 right-0 bottom-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in"
     >
       <div 
         id="prescription-pad-card"
         className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-auto flex flex-col max-h-[calc(100vh-5rem)] overscroll-contain"
-        onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="flex items-center justify-between p-5 bg-gradient-to-r from-teal-950 via-teal-900 to-slate-900 text-white shrink-0">
@@ -74,7 +72,7 @@ export function PrescriptionModal({ scenario, onClose }: PrescriptionModalProps)
             <button
               id="print-prescription-btn"
               onClick={handlePrint}
-              className="p-2 text-teal-200 hover:text-white rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
+              className="touch-target p-2 text-teal-200 hover:text-white rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
               title="Imprimer l'ordonnance"
               aria-label="Imprimer"
             >
@@ -83,7 +81,7 @@ export function PrescriptionModal({ scenario, onClose }: PrescriptionModalProps)
             <button
               id="close-prescription-modal-btn"
               onClick={onClose}
-              className="p-2 text-teal-200 hover:text-white rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
+              className="touch-target p-2 text-teal-200 hover:text-white rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
               aria-label="Fermer l'ordonnance"
             >
               <X className="w-5 h-5" />

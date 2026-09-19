@@ -36,13 +36,11 @@ export function ClinicalGuideModal({ scenario, onClose }: ClinicalGuideModalProp
   return (
     <div 
       id="guide-modal-backdrop"
-      className="fixed top-16 left-0 right-0 bottom-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs overflow-y-auto overscroll-contain animate-fade-in"
-      onClick={onClose}
+      className="fixed top-16 left-0 right-0 bottom-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in"
     >
       <div 
         id="guide-card-content"
         className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-auto flex flex-col max-h-[calc(100vh-5rem)] overscroll-contain"
-        onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="flex items-center justify-between p-5 bg-gradient-to-r from-blue-950 via-slate-900 to-teal-950 text-white shrink-0">
@@ -58,7 +56,7 @@ export function ClinicalGuideModal({ scenario, onClose }: ClinicalGuideModalProp
           <button
             id="close-guide-modal-btn"
             onClick={onClose}
-            className="p-2 text-blue-200 hover:text-white rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
+            className="touch-target p-2 text-blue-200 hover:text-white rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
             aria-label="Fermer la fiche clinique"
           >
             <X className="w-5 h-5" />

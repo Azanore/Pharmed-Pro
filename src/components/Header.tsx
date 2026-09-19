@@ -164,7 +164,7 @@ export function Header({
               {/* Sovereign & Privacy Discreet Icon Button */}
               <button
                 onClick={onOpenPrivacyModal}
-                className="hidden sm:flex items-center justify-center w-8 h-8 rounded-xl text-emerald-700 bg-emerald-50/80 hover:bg-emerald-100 border border-emerald-200/70 transition-colors duration-150 cursor-pointer shadow-2xs"
+                className="hidden sm:flex items-center justify-center touch-target w-10 h-10 rounded-xl text-emerald-700 bg-emerald-50/80 hover:bg-emerald-100 border border-emerald-200/70 transition-colors duration-150 cursor-pointer shadow-2xs"
                 title="Déterminisme 100% Souverain & Conformité RGPD (Cliquez pour détails)"
                 aria-label="Sécurité et souveraineté des données"
               >
@@ -265,7 +265,7 @@ export function Header({
               {/* Mobile Hamburger Drawer Trigger Button */}
               <button
                 onClick={() => setIsMobileDrawerOpen(true)}
-                className="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 border border-slate-200 transition-colors duration-150 cursor-pointer"
+                className="lg:hidden touch-target p-2 rounded-xl text-slate-700 hover:bg-slate-100 border border-slate-200 transition-colors duration-150 cursor-pointer"
                 aria-label="Ouvrir le menu de navigation"
               >
                 <Menu className="w-5 h-5" />
