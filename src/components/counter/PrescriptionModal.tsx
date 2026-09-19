@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { CounterScenario } from "../../types";
-import { Building2, X, FileText, ShieldCheck, Printer } from "lucide-react";
+import { Building2, X, FileText, ShieldCheck } from "lucide-react";
 
 interface PrescriptionModalProps {
   scenario: CounterScenario;
@@ -35,10 +35,6 @@ export function PrescriptionModal({ scenario, onClose }: PrescriptionModalProps)
 
   if (!scenario.prescriptionDetails) return null;
 
-  const handlePrint = () => {
-    window.print();
-  };
-
   return (
     <div 
       id="prescription-modal-backdrop"
@@ -69,15 +65,6 @@ export function PrescriptionModal({ scenario, onClose }: PrescriptionModalProps)
           </div>
 
           <div className="flex items-center gap-1 shrink-0">
-            <button
-              id="print-prescription-btn"
-              onClick={handlePrint}
-              className="touch-target p-2 text-teal-200 hover:text-white rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
-              title="Imprimer l'ordonnance"
-              aria-label="Imprimer"
-            >
-              <Printer className="w-4 h-4" />
-            </button>
             <button
               id="close-prescription-modal-btn"
               onClick={onClose}
