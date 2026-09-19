@@ -1,0 +1,6 @@
+{
+  "name": "PharmEd Pro - Plateforme d'Apprentissage et Conseil Officinal",
+  "description": "Plateforme interactive de formation pharmaceutique : conseil associé rentable, substitution éthique, psychologie patient au comptoir et simulation officinale déterministe et souveraine (zéro IA externe).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
